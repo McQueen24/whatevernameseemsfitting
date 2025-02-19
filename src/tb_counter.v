@@ -44,7 +44,8 @@ initial begin
 
     // Apply reset
     reset = 1;
-    repeat (5) @(posedge clk);
+    //repeat (5) @(posedge clk);
+    #50;
     reset = 0;
 
     // Set counter value in module (reset condition)
@@ -56,12 +57,14 @@ initial begin
     $display("---TB: Counting up---");
     enable = 1;
     up_down = 1; // Count up
-    repeat (20) @(posedge clk);
+    //#repeat (20) @(posedge clk);
+    #50;
 
     // Enable counting down
     $display("---TB: Counting down---");
     up_down = 0; // Count down
-    repeat (20) @(posedge clk);
+    //repeat (20) @(posedge clk);
+    #50;
 
     // Disable counting
     enable = 0;
