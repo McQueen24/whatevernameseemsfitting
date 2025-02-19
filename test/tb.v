@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module tb_counter;
+module tb;
 
 // Inputs
 reg clk;
