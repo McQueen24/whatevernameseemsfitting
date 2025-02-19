@@ -33,10 +33,4 @@ always @(count) begin
     
 end
 
-    // Assertions for verification
-always @(posedge clk) begin
-    //`assert (count, 4'b0000);
-    //`assert (count, 4'b1111);
-end
-
 endmodule
