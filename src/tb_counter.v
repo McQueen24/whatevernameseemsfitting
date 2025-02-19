@@ -1,11 +1,5 @@
 `timescale 1ns / 1ps
 
-`define assert(signal, value) \
-        if (signal !== value) begin \
-            $display("ASSERTION FAILED in %m: signal != value"); \
-            $finish; \
-        end
-
 module tb_counter;
 
 // Inputs
@@ -70,7 +64,7 @@ initial begin
     enable = 0;
     #20;
 
-    $stop;
+    //$stop;
 end
 
 endmodule
